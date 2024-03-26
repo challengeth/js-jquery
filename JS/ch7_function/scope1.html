@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전역함수 지역함수</title>
+    <script>
+        function myFnc() {
+            document.write("전역 함수"+"<br>");
+        }
+
+        function outerFnc() {
+            function myFnc() {
+                document.write("지역 함수" +"<br>");
+            }
+            myFnc(); // 지역함수 호출
+        }
+        
+        outerFnc();
+        myFnc(); // 전역함수 호출
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

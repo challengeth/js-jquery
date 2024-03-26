@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var score = 10;
+
+        function myFnc() {
+            var score = 50;
+
+            document.write("myFnc 내에서 score 사용: " + score + "<br>");
+        }
+
+        myFnc();
+
+        document.write("myFnc 밖에서 score 사용: " + score);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
