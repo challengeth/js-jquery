@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>평균 구하기</title>
+    <script>
+        function testAvg(arrData){
+            var sum = 0;
+            for (var i = 0; i < arrData.length; i++ ) {
+                sum += Number(prompt(arrData[i] + " 점수는 ? ", "0"));
+            }
+            
+            var avg = sum / arrData.length;
+            return avg;
+        }
+
+        var arrSubject = ["국어", "수학"];
+        var avg = testAvg(arrSubject);
+        document.write("평균 : " + avg);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

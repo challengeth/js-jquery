@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 검증</title>
+    <script>
+        var rightId = "bigwise92";
+        var rightPswd = "1234";
+
+        var login = function(userId, userPswd) {
+            if(userId == rightId) {
+                if( userPswd == rightPswd) {
+                    alert("로그인에 성공하셨습니다.")
+                } else {
+                    alert("비밀번호가 틀렸습니다.")
+                }
+
+            } else {
+                alert("아이디가 틀렸습니다");
+            }
+        }
+        var userId = prompt("아이디를 입력하세요");
+        var userPswd = prompt("비밀번호를 입력하세요");
+        login(userId,userPswd);
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

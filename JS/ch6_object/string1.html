@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>   //0123456789
+        var t = "Hello Thank you good luck to you";
+        document.write(t.charAt(4) + "<br>");               // o 
+        document.write(t.indexOf("you") + "<br>");          // 12 - (you발견하면 거기서 첫번째 index 반환)
+        document.write(t.indexOf("you",16) + "<br>");       // 29 - 16인덱스부터 시작 you 발견하면 반환
+        document.write(t.lastIndexOf("you") + "<br>");      // 29 - 문자열 오른쪽에서 왼쪽방향으로 제일먼저 발견된 you 인덱스반환(y인덱스)
+        document.write(t.lastIndexOf("you",25) + "<br>")    // 12 - 25부터 시작해서 왼쪽으로 제일 먼저 발견된 you 인덱스 반환(y인덱스)
+        
+        document.write(t.substring(6) + "<br>");            // "Thank you good luck to you" - 6 ~ 문장 끝까지 반환                                                              
+        
+        document.write(t.substring(21,25) + "<br>");        // "luck" -  21 <= x < 25 반환 = 매개변수 양수 일땐, slice랑 동일
+        document.write(t.slice(21,25) + "<br>");            // "luck" -  21 <= x < 25 반환 = 매개변수 양수 일땐, substring이랑 동일함
+        
+        document.write(t.slice(21,-1) + "<br>");            // "luck to yo" -  21 <= x < -1(뒤에서 처음 u) 반환 
+        document.write(t.substring(21,-1) + "<br>");        // "Hello Thank you good " - substring은 음수는 0으로 받음
+                                                            // 따라서 0 <= x < 21 로 반환
+        
+        document.write(t.substr(21,4) + "<br>");            // "luck" - 21번부터 4글자 가져옴
+        document.write(t.replace("you", "me"));             // 문장 왼쪽에서 제일 먼저 발견된 you를 me로 치환
+        document.write(t.toLocaleLowerCase() + "<br>");     // 문장 소문자로 반환
+        document.write(t.toLocaleUpperCase() + "<br>") ;    // 문장 대문자로 반환
+        document.write(t.length + "<br>")                   // 32 반환 - 문자열 길이(0~31 = 32)
+        
+        var array = t.split("");                             // 빈문자 기준 배열만들기 = 한자한자 다쪼개서 배열로만듬
+        var array = t.split(" ");                            // 공백 문자 기준으로 쪼개서 배열만들기
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
