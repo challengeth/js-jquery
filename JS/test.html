@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var test1 = prompt("프롬프트의 반환타입은?")    // 값 입력시(숫자도) string , 값 입력X string, 취소시 object 아마 null인듯?
+        var test2 = confirm("컨펌의타입은?")            // true , false
+        document.write("prompt의타입 : " + typeof test1 + "<br>");
+        document.write("confirm의타입 : " + typeof test2 + "<br>");
+        
+        var result = isNaN("5-3"); // true
+        var result2 = isNaN(5-3); // 연산결과인 2를가지고 비교 false
+        var result3 = isNaN("53"); // 문자형관계없이 숫자만 존재하므로 false
+        var result4 = isNaN(53); // 숫자이므로 false
+        document.write(result  + "<br>");
+        document.write(result2 + "<br>");
+        document.write(result3 + "<br>");
+        document.write(result3 + "<br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
