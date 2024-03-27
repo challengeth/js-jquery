@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function CheckWeight(name, height, weight) {
+            this.userName = name;
+            this.userHeight = height;
+            this.userWeight = weight;
+            this.minWeight;
+            this.maxWeight; 
+
+            // 생성한 객체의 속성값 출력하는 메서드
+            this.getInfo = function() {
+                var str = "";
+                str += "이름: " + this.userName + ", ";
+                str += "키: " + this.userHeight + ", ";
+                str += "몸무게: " + this.userWeight + "<br>"
+                return str;
+            }
+
+            // 정상 몸무게, 표준 오차 몸무게를 구하여 몸무게 정상인지 출력
+            this.getResult = function() {
+                
+                //  최저몸무게, 최대몸무게 계산 (유저 키 - 100) * 0.9 -5 or +5
+                this.minWeight = (this.userHeight - 100) * 0.9 - 5;
+                this.maxWeight = (this.userHeight - 100) * 0.9 + 5;
+
+                if (this.userWeight >= this.minWeight && this.userWeight <= this.maxWeight)  {
+                    return "정상 몸무게 입니다<br>";
+                } else if(this.userWeight < this.minWeight) {
+                    return "정상 몸무게 미달 입니다<br>"
+                } else {
+                    return "정상 몸무게 초과 입니다<br>"
+                }
+            }
+        }
+
+        var jang = new CheckWeight("장보리", 168, 62);
+        var park = new CheckWeight("박달재", 180, 88);
+        var kim = new CheckWeight();
+        kim.userName = "김태현";
+        kim.userHeight = 180;
+        kim.userWeight = 80;
+        
+        console.log(kim);
+        console.log(jang); // 객체의 속성 기능 출력됨
+        console.log(park);
+
+        document.write(kim.getInfo());
+        document.write(kim.getResult());
+
+        document.write(jang.getInfo());
+        document.write(jang.getResult());
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
