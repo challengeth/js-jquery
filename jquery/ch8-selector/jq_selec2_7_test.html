@@ -7,9 +7,12 @@
 <script>
 $(function(){
 	var obj = [
-		{"area":"서울"},
-		{"area":"부산"},
-		{"area":"전주"}
+		{"area" : "서울",
+		 "name" : "김과장"},
+		{"area" : "부산",
+		 "name" : "이과장"},
+		{"area" : "전주",
+		 "name" : "박과장"}
 	];
 	
 
@@ -18,6 +21,12 @@ $(function(){
 	});
 
 	console.log("====The End1====");
+
+	$.each($("#menu1 li"), function(i,o){
+		console.log(i + ":" , o)
+	})
+
+
 	$("#menu1 li").each(function(i){
 		console.log(i + ":", $(this))
 	});

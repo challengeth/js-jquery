@@ -6,7 +6,11 @@
 <script src="js/jquery.js"></script>
 <script>
 $(function( ){
+	$("#listZone").append("<li>append</li>");
+	$("<li>appendTo</li>").appendTo("#listZone");
 
+	$("#listZone").prepend("<li>prepend</li>");
+	$("<li>prependTo</li>").prependTo("#listZone");
 });
 </script>
 </head>

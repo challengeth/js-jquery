@@ -2,11 +2,17 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<title> 탐색 선택자 </title>  
+<title> 속성 탐색 선택자 </title>  
 <script src="js/jquery.js"></script>
 <script>
 $(function(){
-	
+	$("#wrap a[target]").css({"color" : "#f00"});
+	$("#wrap a[href ^= 'https://']").css({color : "#0f0"});
+	$("#wrap a[href $= '.net']").css({color : "#00f"});
+	$("#wrap a[href *= 'google']").css("color","#000");
+	// background-color 같은 경우 자바스크립트에서 유효한 속성명이 아니므로 반드시 "" 나 '' 걸어줘야한다
+	$("#member_f :text").css({'background-color' : "#ff0"});
+	$("#member_f :password").css("background-color", "#0ff");
 });
 </script>
 </head>
@@ -25,7 +31,7 @@ $(function(){
 		<p>
 			<label for="user_pw">비밀번호</label>
 			<input type="password" name="user_pw" id="user_pw">
-		</p>
+		</p> 
 	</form>
 </body>
 </html>

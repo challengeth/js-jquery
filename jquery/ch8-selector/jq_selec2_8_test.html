@@ -7,20 +7,34 @@
 <script>
 $(function(){
 	var arr1 = [{
-		"area":"서울", 
-		"name":"무대리"
-		},{
-			"area":"부산", 
-			"name":"홍과장"
-		},{
-			"area":"대전", 
-			"name":"박사장"
-		},{
-			"area":"서울", 
-			"name":"빅마마"
-		}];
-  
+		"area" : "서울",
+		"name" : "김과장"
+	},{
+		"area" : "대전",
+		"name" : "이과장"
+	},{
+		"area" : "대구",
+		"name" : "박과장"
+	},{
+		"area" : "서울",
+		"name" : "최과장"
+	}];
+
+	var arr2 = $.map(arr1, function(obj,index){
+		if(obj.area == "서울") {
+			return obj;
+		}
+	});
+	console.log(arr2);
+
+	var arr = [1, 2, 3];
+	var newArr = $.map(arr, function(value, index) {
+    	return value * 2; // 각 항목을 2배로 곱하여 새 배열 생성
+	});
+	console.log(newArr); // [2, 4, 6]
 });
+
+
 </script>
 </head>
 <body>
