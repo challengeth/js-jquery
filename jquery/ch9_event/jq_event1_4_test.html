@@ -5,9 +5,27 @@
 <title> 이벤트 </title>  
 <script src="js/jquery.js"></script>
 <script>
-$(function( ) {
+$(function() {
+	$(document).ready(function(){
+		var h1 = $(".img1").height();
+		alert(h1);
+	});
 
+	$(window).load(function(){
+		var h2 = $(".img1").height();
+		alert(h2);
+	});
+
+	$("a").click(function() {
+		//코드 
+		return false;
+	})
+	$("a").click(function(e) {
+		e.preventDefault();
+		코드
+	})
 });
+
 </script>
 </head>
 <body>

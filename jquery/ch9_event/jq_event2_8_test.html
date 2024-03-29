@@ -6,12 +6,18 @@
 <script src="js/jquery.js"></script>
 <script>
 $(function(){
+	$(".btn_1").on("mouseover", function(){
+		alert("HELLO");
+	});
 
+	$(".del_1").on("click", function(){
+		$(".btn_1").off("mouseover");
+	});
 });
 </script>
 </head>
 <body>
-<div id="wrap">
+<div id="wrap">a
 	<p><button class="btn_1">버튼1</button></p>
 </div>
 <p>
