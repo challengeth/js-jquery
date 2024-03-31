@@ -4,28 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="js/jquery.js"></script>
     <script>
-       $(document).ready(function(){
-        // 코드
-       });
-       $(function(){
-        //코드
-       });
-       $(document).on("ready",function(){
+        $(function(){
+            $.ajax({
+                url : "url",
+                type : "GET",
+                data : "hello",
+                dataType : 'json',
+                success : function(data) {
 
-       });
+                },
+                error : function() {
 
-       $(window).load(function() {
-
-       })
-       $(window).on("load", function(){
-        
-       })
+                }
+            })
+            
+        })
     </script>
 </head>
 <body>
-    <a href=""></a>
-    <input type=""    >
+    <div class="wrap"></div>
+    
     
 
 </body>
